@@ -1,7 +1,7 @@
 +++
 author = "Luna Ranjit"
 categories = []
-date = 2019-12-23T18:15:00Z
+date = "2019-12-23T18:15:00Z"
 description = ""
 first_published_in = false
 image = "images/nobuying.jpeg"

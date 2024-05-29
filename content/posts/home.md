@@ -1,7 +1,7 @@
 +++
 author = "Luna Ranjit"
 categories = []
-date = 2020-08-14T04:00:00Z
+date = "2020-08-14T04:00:00Z"
 description = ""
 first_published_in = false
 image = "images/dykesonbikesjh.jpeg"

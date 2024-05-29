@@ -1,7 +1,7 @@
 +++
 author = "Luna Ranjit"
 categories = []
-date = 2021-07-10T18:15:00Z
+date = "2021-07-10T18:15:00Z"
 description = ""
 first_published_in = false
 image = "images/green_luna_moth_on_lichencovered_rock_actias_luna.jpeg"
