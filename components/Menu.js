@@ -74,7 +74,7 @@ export const Menu = () => {
                   href="https://lunaranjit.medium.com"
                   target="_blank"
                 >
-                  medium
+                  <img src="/images/medium.svg" alt="Medium logo" />
                 </a>
               </li>
               <li className="nav-item">
