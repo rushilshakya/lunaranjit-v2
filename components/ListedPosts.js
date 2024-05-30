@@ -6,7 +6,12 @@ export const ListedPosts = ({ posts }) => {
     <div className="articlewrap">
       {posts.map((post) => (
         <article key={post.id}>
-          <img src={`/${post.image}`} alt={post.title} />
+          <Image
+            src={`/${post.image}`}
+            alt={post.title}
+            width={544.664}
+            height={200}
+          />
           <div className="caption">
             <h3>
               <a href={`/post/${post.id}`}>{post.title}</a>
