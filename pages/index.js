@@ -1,7 +1,6 @@
+import { HeroPost } from "@/components/HeroPost";
 import { Layout } from "@/components/Layout";
 import { getSortedData } from "@/lib/getData";
-import { urlize } from "@/lib/utilities";
-import Image from "next/image";
 
 export async function getStaticProps() {
   const allPosts = getSortedData("posts");
@@ -23,45 +22,7 @@ export default function Home({ allPosts, pinnedPost }) {
       <section className="section pt-0">
         <div className="container-fluid">
           <div className="row-lr">
-            {/* <!--pinned post-->
-            {{ if not ($.Scratch.Get "pinnedValue") }}
-            {{ $.Scratch.Set "pinnedValue" true }}
-            {{ range first 1 (where .Site.Pages "Params.pinned" true)  }}
-            {{ $.Scratch.Set "pinnedTitle" .Title}}
-            */}
-
-            <div className="col-12 mb-4">
-              <div className="post">
-                <Image
-                  src={`/${pinnedPost.image}`}
-                  className="img-pinned-title"
-                  alt={pinnedPost.title}
-                  width={2191}
-                  height={420}
-                />
-                {/* <img
-                  src={`${pinnedPost.image}`}
-                  className="img-pinned-title"
-                  alt={pinnedPost.title}
-                /> */}
-                <div className="post-content">
-                  <h2 className="post-title">
-                    <a href={`/post/${pinnedPost.id}`}>{pinnedPost.title}</a>
-                  </h2>
-                  <ul className="list-inline post-meta">
-                    <li className="list-inline-item">
-                      <i className="ti-tag"></i>
-                    </li>
-                    {pinnedPost.tags.length &&
-                      pinnedPost.tags.map((tag, i) => (
-                        <li className="list-inline-item" key={i}>
-                          <a href={`/tags/${urlize(tag)}`}>{tag}</a>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <HeroPost post={pinnedPost} />
             {/*
             {{ $paginator := .Paginate (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Title" "!="  ($.Scratch.Get "pinnedTitle") ) }}
 
