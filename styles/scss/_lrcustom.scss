@@ -1,0 +1,21 @@
+.row-lr {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.container-fluid-lr {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.link-lr {
+	background-color: white;
+	color: dodgerblue;
+}
+.bg-aliceblue {
+	background-color: aliceblue;
+}
+.form-here {
+	display: none;
+}
