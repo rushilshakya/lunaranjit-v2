@@ -16,17 +16,18 @@ export const HeroPost = ({ post }) => {
           <h2 className="post-title">
             <a href={`/post/${post.id}`}>{post.title}</a>
           </h2>
-          <ul className="list-inline post-meta">
-            <li className="list-inline-item">
-              <i className="ti-tag"></i>
-            </li>
-            {post.tags.length &&
-              post.tags.map((tag, i) => (
+          {post.tags.length > 0 && (
+            <ul className="list-inline post-meta">
+              <li className="list-inline-item">
+                <i className="ti-tag"></i>
+              </li>
+              {post.tags.map((tag, i) => (
                 <li className="list-inline-item" key={i}>
                   <a href={`/tags/${urlize(tag)}`}>{tag}</a>
                 </li>
               ))}
-          </ul>
+            </ul>
+          )}
         </div>
       </div>
     </div>

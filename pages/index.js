@@ -1,20 +1,22 @@
 import { HeroPost } from "@/components/HeroPost";
 import { Layout } from "@/components/Layout";
+import { ListedPosts } from "@/components/ListedPosts";
 import { getSortedData } from "@/lib/getData";
 
 export async function getStaticProps() {
   const allPosts = getSortedData("posts");
   const pinnedPost = allPosts.find((x) => x.pinned === true);
+  const remainingPosts = allPosts.filter((x) => x.id !== pinnedPost.id);
 
   return {
     props: {
-      allPosts,
+      remainingPosts,
       pinnedPost,
     },
   };
 }
 
-export default function Home({ allPosts, pinnedPost }) {
+export default function Home({ remainingPosts, pinnedPost }) {
   const incrNbr = 10;
 
   return (
@@ -22,28 +24,12 @@ export default function Home({ allPosts, pinnedPost }) {
       <section className="section pt-0">
         <div className="container-fluid">
           <div className="row-lr">
-            <HeroPost post={pinnedPost} />
+            {pinnedPost && <HeroPost post={pinnedPost} />}
+            {remainingPosts.length && <ListedPosts posts={remainingPosts} />}
             {/*
             {{ $paginator := .Paginate (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Title" "!="  ($.Scratch.Get "pinnedTitle") ) }}
 
-          <!--rest of posts-->
-            <div className="articlewrap">
-              {{ range $index,$elements:= $paginator.Pages }}
-              <article>
-                <img src="{{ partial `functions/imageproc` .Params.Image }}" alt="{{ .Title }}">
-                <div className="caption">
-                  <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                  <ul className="list-inline post-meta">
-                    <li className="list-inline-item"><i className="ti-tag"></i></li>
-                    {{ range .Params.Tags }}
-                    <li className="list-inline-item"><a
-                        href="{{ `tags/` | relLangURL }}{{ . | urlize | lower }}">{{ . | humanize }}</a></li> {{ end }}
-                  </ul>
-                  <p>{{ .Summary }}</p>
-                </div>
-              </article>
-              {{ end }}
-            </div>
+
 
             <div className="col-12">
 
