@@ -1,4 +1,4 @@
-// import { Layout } from "../components/Layout";
+import { Layout } from "../components/Layout";
 import { getSortedData } from "../lib/getData";
 
 export async function getStaticProps() {
@@ -15,8 +15,8 @@ export default function Home({ allPosts }) {
   const incrNbr = 10;
 
   return (
-    // <Layout>
+    <Layout>
       <h1>Hello</h1>
-    // </Layout>
+    </Layout>
   );
 }
