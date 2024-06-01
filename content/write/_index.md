@@ -1,10 +1,11 @@
 ---
-title: writing across and between boundaries of personal and political, state and
+title:
+  writing across and between boundaries of personal and political, state and
   society, United States and Nepal, poetry and prose
 description: This is meta description.
 type: menu
-
 ---
+
 ## selected writing
 
 <br>
@@ -59,4 +60,4 @@ type: menu
 
 For more writing, please visit: [https://lunaranjit.medium.com/](https://lunaranjit.medium.com/ "https://lunaranjit.medium.com/")
 
-Please [**share your email**](http://tinyletter.com/LunaRanjit) if you would like to receive my sporadic email updates about new writing and musings.
+Please [**share your email**](https://tinyletter.com/LunaRanjit) if you would like to receive my sporadic email updates about new writing and musings.
