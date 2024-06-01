@@ -29,9 +29,11 @@ export default function Home({ remainingPosts, pinnedPost }) {
             {/*
             TODO: Menu items - about, write, speak, collaborate, contact, books
             TODO: Individual posts
+            TODO: Author page
             TODO: Tag pages
             TODO: Pagination
             TODO: Search functionality
+            TODO: Other draft pages like organize?
             {{ $paginator := .Paginate (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Title" "!="  ($.Scratch.Get "pinnedTitle") ) }}
 
 
