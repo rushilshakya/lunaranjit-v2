@@ -31,6 +31,7 @@ export default function Home({ remainingPosts, pinnedPost }) {
             TODO: Individual posts
             TODO: Tag pages
             TODO: Pagination
+            TODO: Search functionality
             {{ $paginator := .Paginate (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Title" "!="  ($.Scratch.Get "pinnedTitle") ) }}
 
 
