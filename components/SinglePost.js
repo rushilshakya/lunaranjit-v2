@@ -48,7 +48,7 @@ export default function SinglePost({ postData }) {
                 )}
                 <span>
                   <i className="ti-user mr-2"></i>
-                  {postData.auther === "Luna Ranjit" ? (
+                  {postData.author === "Luna Ranjit" ? (
                     <a href="/about">{postData.author}</a>
                   ) : (
                     <a href={`/author/${postData.author}`}>{postData.author}</a>
