@@ -1,7 +1,7 @@
 import { urlize, getSummary } from "@/lib/utilities";
 import Image from "next/image";
 
-export const ListedPosts = ({ posts }) => {
+export const ListPosts = ({ posts }) => {
   return (
     <div className="articlewrap">
       {posts.map((post) => (

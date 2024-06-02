@@ -1,6 +1,6 @@
 import { HeroPost } from "@/components/HeroPost";
 import { Layout } from "@/components/Layout";
-import { ListedPosts } from "@/components/ListedPosts";
+import { ListPosts } from "@/components/ListPosts";
 import { getSortedData } from "@/lib/getData";
 
 export async function getStaticProps() {
@@ -25,9 +25,7 @@ export default function Home({ remainingPosts, pinnedPost }) {
         <div className="container-fluid">
           <div className="row-lr">
             {pinnedPost && <HeroPost post={pinnedPost} />}
-            {remainingPosts.length > 0 && (
-              <ListedPosts posts={remainingPosts} />
-            )}
+            {remainingPosts.length > 0 && <ListPosts posts={remainingPosts} />}
             {/*
             DONE: Menu items - about, write, speak, collaborate, contact, books
             DONE: Individual posts
