@@ -1,7 +1,7 @@
 import { urlize } from "@/lib/utilities";
 import Image from "next/image";
 
-export const ListedTagPosts = ({ posts }) => {
+export const ListTagPosts = ({ posts }) => {
   return (
     <>
       {posts.map((post) => (
