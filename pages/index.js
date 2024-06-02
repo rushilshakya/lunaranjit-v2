@@ -25,7 +25,9 @@ export default function Home({ remainingPosts, pinnedPost }) {
         <div className="container-fluid">
           <div className="row-lr">
             {pinnedPost && <HeroPost post={pinnedPost} />}
-            {remainingPosts.length && <ListedPosts posts={remainingPosts} />}
+            {remainingPosts.length > 0 && (
+              <ListedPosts posts={remainingPosts} />
+            )}
             {/*
             TODO: Menu items - about, write, speak, collaborate, contact, books
             TODO: Individual posts
