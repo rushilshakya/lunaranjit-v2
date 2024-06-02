@@ -1,4 +1,4 @@
-import { urlize, getSummary } from "@/lib/utilities";
+import { urlize } from "@/lib/utilities";
 import Image from "next/image";
 
 export const ListedTagPosts = ({ posts }) => {
