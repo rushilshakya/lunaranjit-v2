@@ -32,7 +32,7 @@ export default function Home({ remainingPosts, pinnedPost }) {
             DONE: Menu items - about, write, speak, collaborate, contact, books
             DONE: Individual posts
             TODO: Author page
-            TODO: Tag pages
+            DONE: Tag pages
             TODO: Pagination
             TODO: Search functionality
             TODO: Other draft pages like organize?
