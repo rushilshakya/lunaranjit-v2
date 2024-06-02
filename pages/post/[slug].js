@@ -4,7 +4,7 @@ import { getAllContentIds, getSingleContentFromSlug } from "@/lib/getData";
 
 const contentType = "posts";
 
-export default function MHDprovider({ blogPost }) {
+export default function Post({ blogPost }) {
   return (
     <Layout>
       <SinglePost postData={blogPost} />
