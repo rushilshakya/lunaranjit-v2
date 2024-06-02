@@ -1,6 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { getAllTags, getPostsForTag } from "@/lib/getData";
-import { ListedPosts } from "@/components/ListedPosts";
+import { ListedTagPosts } from "@/components/ListedTagPosts";
 import { HeroPost } from "@/components/HeroPost";
 import { urlize } from "@/lib/utilities";
 
@@ -23,7 +23,7 @@ export default function Tag({ tag, postsForTag }) {
           <div className="row-lr">
             {postsForTag.length > 0 && <HeroPost post={postsForTag[0]} />}
             {postsForTag.length > 1 && (
-              <ListedPosts posts={postsForTag.slice(1)} />
+              <ListedTagPosts posts={postsForTag.slice(1)} />
             )}
           </div>
         </div>
