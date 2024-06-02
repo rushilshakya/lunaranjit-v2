@@ -41,7 +41,7 @@ export default function SinglePost({ postData }) {
 
                     {postData.tags.map((tag, i) => (
                       <li className="list-inline-item" key={i}>
-                        <a href={`/tags/${urlize(tag)}`}>{tag}</a>
+                        <a href={`/tag/${urlize(tag)}`}>{tag}</a>
                       </li>
                     ))}
                   </ul>
