@@ -9,7 +9,7 @@ export const HeroPost = ({ post }) => {
           src={`/${post.image}`}
           className="img-pinned-title"
           alt={post.title}
-          width={2191}
+          width={1650}
           height={420}
         />
         <div className="post-content">
