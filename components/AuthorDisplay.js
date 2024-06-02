@@ -1,35 +1,59 @@
-import { urlize } from "@/lib/utilities";
 import Image from "next/image";
+import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 export const AuthorDisplay = ({ author }) => {
   return (
-    <div className="col-12 mb-4">
-      <div className="post">
-        <Image
-          src={`/${post.image}`}
-          className="img-pinned-title"
-          alt={post.title}
-          width={1650}
-          height={420}
-        />
-        <div className="post-content">
-          <h2 className="post-title">
-            <a href={`/post/${post.id}`}>{post.title}</a>
-          </h2>
-          {post.tags.length > 0 && (
-            <ul className="list-inline post-meta">
-              <li className="list-inline-item">
-                <i className="ti-tag"></i>
-              </li>
-              {post.tags.map((tag, i) => (
-                <li className="list-inline-item" key={i}>
-                  <a href={`/tag/${urlize(tag)}`}>{tag}</a>
-                </li>
-              ))}
-            </ul>
-          )}
+    <section className="section bg-light">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-10 mx-auto">
+            <div className="text-center">
+              <figure>
+                {author.image && (
+                  <Image
+                    src={`/${author.image}`}
+                    className="rounded-circle img-fluid mb-4"
+                    style={{
+                      height: "150px",
+                      width: "150px",
+                      objectFit: "cover",
+                    }}
+                    alt={author.title}
+                    width={150}
+                    height={150}
+                  />
+                )}
+                <figcaption>
+                  <h4>{author.title}</h4>
+                </figcaption>
+              </figure>
+              {author.content && (
+                <>
+                  <hr />
+                  <Markdown rehypePlugins={[rehypeRaw]}>
+                    {author.content}
+                  </Markdown>
+                </>
+              )}
+              {author.social.length > 0 && (
+                <>
+                  <hr />
+                  <ul className="list-inline social-icons">
+                    {author.social.map((socialMedia, i) => (
+                      <li className="list-inline-item" key={i}>
+                        <a href={socialMedia.link}>
+                          <i className={socialMedia.icon}></i>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

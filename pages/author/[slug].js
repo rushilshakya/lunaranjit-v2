@@ -8,15 +8,7 @@ const contentType = "posts";
 export default function Author({ author, posts }) {
   return (
     <Layout>
-      <section className="section-sm">
-        <div className="container">
-          <div className="text-center">
-            <h1 className="text-center display-3">
-              Items are showing from {author.title}
-            </h1>
-          </div>
-        </div>
-      </section>
+      <AuthorDisplay author={author} />
       <section className="section pt-0">
         <div className="container-fluid">
           <div className="row-lr">
