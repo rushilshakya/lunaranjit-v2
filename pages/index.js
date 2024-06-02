@@ -29,8 +29,8 @@ export default function Home({ remainingPosts, pinnedPost }) {
               <ListedPosts posts={remainingPosts} />
             )}
             {/*
-            TODO: Menu items - about, write, speak, collaborate, contact, books
-            TODO: Individual posts
+            DONE: Menu items - about, write, speak, collaborate, contact, books
+            DONE: Individual posts
             TODO: Author page
             TODO: Tag pages
             TODO: Pagination
