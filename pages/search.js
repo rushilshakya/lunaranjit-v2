@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PostCard } from "@/components/PostCard";
 import { getSortedData } from "@/lib/getData";
 import { useSearchParams } from "next/navigation";
@@ -14,25 +14,30 @@ export async function getStaticProps() {
   };
 }
 export default function Search({ allPosts }) {
-  // const [searchTerm, setSearchTerm] = useState("");
-  // const [searchResults, setSearchResults] = useState(allPosts);
   const searchParams = useSearchParams();
-  const search = searchParams.get("s")
-    ? searchParams.get("s").replace("+", " ").toLowerCase()
-    : "";
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(undefined);
 
-  const searchResults = allPosts.filter((x) =>
-    x.title.toLowerCase().includes(search)
-  );
+  useEffect(() => {
+    const search =
+      searchParams.get("s") &&
+      searchParams.get("s").trim().replace("+", " ").toLowerCase();
+    if (search) {
+      setSearchTerm(search);
+      setSearchResults(
+        allPosts.filter((x) => x.title.toLowerCase().includes(search))
+      );
+    }
+  }, [searchParams, allPosts]);
+  console.log("searchTerm is", searchTerm);
 
-  console.log("search is", search);
   return (
     <Layout>
       <section className="section-sm">
         <div className="container">
           <div className="text-center">
             <h1 className="text-center display-3">
-              Search result for {search}
+              Search results for &ldquo;{searchTerm}&rdquo;
             </h1>
           </div>
         </div>
@@ -41,14 +46,26 @@ export default function Search({ allPosts }) {
       <section className="section pt-0">
         <div className="container-fluid">
           <div className="row-lr" id="search-results">
-            {searchResults.map((post) => (
-              <PostCard
-                post={post}
-                imgWidth={810}
-                imgHeight={344}
-                key={post.id}
-              />
-            ))}
+            {searchTerm ? (
+              searchResults.length > 0 ? (
+                searchResults.map((post) => (
+                  <PostCard
+                    post={post}
+                    imgWidth={810}
+                    imgHeight={344}
+                    key={post.id}
+                  />
+                ))
+              ) : (
+                <div className="text-center mx-auto">
+                  <h2>No results found</h2>
+                </div>
+              )
+            ) : (
+              <div className="text-center mx-auto">
+                <h2>Please enter a valid search query</h2>
+              </div>
+            )}
           </div>
         </div>
       </section>
