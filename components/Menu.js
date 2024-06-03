@@ -2,6 +2,31 @@ import { useState } from "react";
 
 export const Menu = () => {
   const [showSearch, setShowSearch] = useState("");
+
+  const showSearchBar = () => {
+    return (
+      <div className="search-wrapper open">
+        <form action="/search/" className="h-100">
+          <input
+            autoFocus
+            className="search-box pl-4"
+            id="search-query"
+            name="s"
+            type="search"
+            placeholder="Type and hit enter..."
+          />
+        </form>
+        <button
+          id="searchClose"
+          className="search-close"
+          onClick={() => setShowSearch("")}
+        >
+          <i className="ti-close text-dark"></i>
+        </button>
+      </div>
+    );
+  };
+
   return (
     <header>
       <div className="container-fluid">
@@ -94,24 +119,7 @@ export const Menu = () => {
               >
                 <i className="ti-search"></i>
               </button>
-              <div className={`search-wrapper ${showSearch}`}>
-                <form action="/search/" className="h-100">
-                  <input
-                    className="search-box pl-4"
-                    id="search-query"
-                    name="s"
-                    type="search"
-                    placeholder="Type and hit enter..."
-                  />
-                </form>
-                <button
-                  id="searchClose"
-                  className="search-close"
-                  onClick={() => setShowSearch("")}
-                >
-                  <i className="ti-close text-dark"></i>
-                </button>
-              </div>
+              {showSearch && showSearchBar()}
             </div>
           </div>
         </nav>

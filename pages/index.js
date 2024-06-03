@@ -27,13 +27,14 @@ export default function Home({ remainingPosts, pinnedPost }) {
             {pinnedPost && <HeroPost post={pinnedPost} />}
             {remainingPosts.length > 0 && <ListPosts posts={remainingPosts} />}
             {/*
+            TODO: Pagination
+            TODO: Other draft pages like organize?
+            
             DONE: Menu items - about, write, speak, collaborate, contact, books
             DONE: Individual posts
             DONE: Author page
             DONE: Tag pages
-            TODO: Pagination
-            TODO: Search functionality
-            TODO: Other draft pages like organize?
+            DONE: Search functionality
             {{ $paginator := .Paginate (where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Title" "!="  ($.Scratch.Get "pinnedTitle") ) }}
 
 

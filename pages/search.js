@@ -25,11 +25,16 @@ export default function Search({ allPosts }) {
     if (search) {
       setSearchTerm(search);
       setSearchResults(
-        allPosts.filter((x) => x.title.toLowerCase().includes(search))
+        allPosts.filter(
+          (x) =>
+            x.title.toLowerCase().includes(search) ||
+            x.author.toLowerCase().includes(search) ||
+            x.content.toLowerCase().includes(search) ||
+            x.tags.join(" ").toLowerCase().includes(search)
+        )
       );
     }
   }, [searchParams, allPosts]);
-  console.log("searchTerm is", searchTerm);
 
   return (
     <Layout>
