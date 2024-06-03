@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import Link from "next/link";
 
 export const AuthorDisplay = ({ author }) => {
   return (
@@ -42,9 +43,9 @@ export const AuthorDisplay = ({ author }) => {
                   <ul className="list-inline social-icons">
                     {author.social.map((socialMedia, i) => (
                       <li className="list-inline-item" key={i}>
-                        <a href={socialMedia.link}>
+                        <Link href={socialMedia.link}>
                           <i className={socialMedia.icon}></i>
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

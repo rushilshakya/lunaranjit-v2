@@ -1,5 +1,6 @@
 import { urlize } from "@/lib/utilities";
 import Image from "next/image";
+import Link from "next/link";
 
 export const HeroPost = ({ post }) => {
   return (
@@ -14,7 +15,7 @@ export const HeroPost = ({ post }) => {
         />
         <div className="post-content">
           <h2 className="post-title">
-            <a href={`/post/${post.id}`}>{post.title}</a>
+            <Link href={`/post/${post.id}`}>{post.title}</Link>
           </h2>
           {post.tags.length > 0 && (
             <ul className="list-inline post-meta">
@@ -23,7 +24,7 @@ export const HeroPost = ({ post }) => {
               </li>
               {post.tags.map((tag, i) => (
                 <li className="list-inline-item" key={i}>
-                  <a href={`/tag/${urlize(tag)}`}>{tag}</a>
+                  <Link href={`/tag/${urlize(tag)}`}>{tag}</Link>
                 </li>
               ))}
             </ul>

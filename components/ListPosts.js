@@ -1,5 +1,6 @@
 import { urlize, getSummary } from "@/lib/utilities";
 import Image from "next/image";
+import Link from "next/link";
 
 export const ListPosts = ({ posts }) => {
   return (
@@ -14,7 +15,7 @@ export const ListPosts = ({ posts }) => {
           />
           <div className="caption">
             <h3>
-              <a href={`/post/${post.id}`}>{post.title}</a>
+              <Link href={`/post/${post.id}`}>{post.title}</Link>
             </h3>
             {post.tags.length > 0 && (
               <ul className="list-inline post-meta">
@@ -24,7 +25,7 @@ export const ListPosts = ({ posts }) => {
 
                 {post.tags.map((tag, i) => (
                   <li className="list-inline-item" key={i}>
-                    <a href={`/tag/${urlize(tag)}`}>{tag}</a>
+                    <Link href={`/tag/${urlize(tag)}`}>{tag}</Link>
                   </li>
                 ))}
               </ul>

@@ -2,6 +2,7 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { urlize } from "@/lib/utilities";
+import Link from "next/link";
 
 export default function SinglePost({ postData }) {
   return (
@@ -41,7 +42,7 @@ export default function SinglePost({ postData }) {
 
                     {postData.tags.map((tag, i) => (
                       <li className="list-inline-item" key={i}>
-                        <a href={`/tag/${urlize(tag)}`}>{tag}</a>
+                        <Link href={`/tag/${urlize(tag)}`}>{tag}</Link>
                       </li>
                     ))}
                   </ul>
@@ -49,9 +50,11 @@ export default function SinglePost({ postData }) {
                 <span>
                   <i className="ti-user mr-2"></i>
                   {postData.author === "Luna Ranjit" ? (
-                    <a href="/about">{postData.author}</a>
+                    <Link href="/about">{postData.author}</Link>
                   ) : (
-                    <a href={`/author/${postData.author}`}>{postData.author}</a>
+                    <Link href={`/author/${postData.author}`}>
+                      {postData.author}
+                    </Link>
                   )}
                 </span>
               </div>
