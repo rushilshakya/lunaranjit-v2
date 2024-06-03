@@ -4,7 +4,7 @@ import rehypeRaw from "rehype-raw";
 
 export const AuthorDisplay = ({ author }) => {
   return (
-    <section className="section bg-light">
+    <section className="section-sm bg-aliceblue">
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto">

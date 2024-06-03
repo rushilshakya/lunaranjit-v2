@@ -29,7 +29,7 @@ export default function Home({ remainingPosts, pinnedPost }) {
             {/*
             DONE: Menu items - about, write, speak, collaborate, contact, books
             DONE: Individual posts
-            TODO: Author page
+            DONE: Author page
             DONE: Tag pages
             TODO: Pagination
             TODO: Search functionality

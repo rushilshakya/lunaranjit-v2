@@ -9,13 +9,7 @@ export default function Author({ author, posts }) {
   return (
     <Layout>
       <AuthorDisplay author={author} />
-      <section className="section pt-0">
-        <div className="container-fluid">
-          <div className="row-lr">
-            {posts.length > 0 && <ListAuthorPosts posts={posts} />}
-          </div>
-        </div>
-      </section>
+      {posts.length > 0 && <ListAuthorPosts posts={posts} />}
     </Layout>
   );
 }
