@@ -17,8 +17,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ remainingPosts, pinnedPost }) {
-  const incrNbr = 10;
-
   return (
     <Layout>
       <section className="section pt-0">
