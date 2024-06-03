@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export const Menu = () => {
+  const [showSearch, setShowSearch] = useState("");
   return (
     <header>
       <div className="container-fluid">
@@ -84,10 +87,14 @@ export const Menu = () => {
               </li>
             </ul>
             <div className="search">
-              <button id="searchOpen" className="search-btn">
+              <button
+                id="searchOpen"
+                className="search-btn"
+                onClick={() => setShowSearch("open")}
+              >
                 <i className="ti-search"></i>
               </button>
-              <div className="search-wrapper">
+              <div className={`search-wrapper ${showSearch}`}>
                 <form action="/search/" className="h-100">
                   <input
                     className="search-box pl-4"
@@ -97,7 +104,11 @@ export const Menu = () => {
                     placeholder="Type and hit enter..."
                   />
                 </form>
-                <button id="searchClose" className="search-close">
+                <button
+                  id="searchClose"
+                  className="search-close"
+                  onClick={() => setShowSearch("")}
+                >
                   <i className="ti-close text-dark"></i>
                 </button>
               </div>
