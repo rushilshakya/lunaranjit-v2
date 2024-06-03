@@ -1,8 +1,8 @@
 import { Layout } from "@/components/Layout";
 import { getAllTags, getPostsForTag } from "@/lib/getData";
-import { ListTagPosts } from "@/components/ListTagPosts";
 import { HeroPost } from "@/components/HeroPost";
 import { urlize } from "@/lib/utilities";
+import { PostCard } from "@/components/PostCard";
 
 const contentType = "posts";
 
@@ -22,9 +22,17 @@ export default function Tag({ tag, postsForTag }) {
         <div className="container-fluid">
           <div className="row-lr">
             {postsForTag.length > 0 && <HeroPost post={postsForTag[0]} />}
-            {postsForTag.length > 1 && (
-              <ListTagPosts posts={postsForTag.slice(1)} />
-            )}
+            {postsForTag.length > 1 &&
+              postsForTag
+                .slice(1)
+                .map((post) => (
+                  <PostCard
+                    post={post}
+                    imgWidth={810}
+                    imgHeight={344}
+                    key={post.id}
+                  />
+                ))}
           </div>
         </div>
       </section>
