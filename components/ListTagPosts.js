@@ -25,7 +25,6 @@ export const ListTagPosts = ({ posts }) => {
                   </li>
                   {post.tags.map((tag, i) => (
                     <li className="list-inline-item" key={i}>
-                      {" "}
                       <a href={`/tag/${urlize(tag)}`}>{tag}</a>
                     </li>
                   ))}
