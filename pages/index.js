@@ -32,3 +32,14 @@ export default function Home({ remainingPosts, pinnedPost }) {
     </Layout>
   );
 }
+
+/*
+TODO: Pagination
+TODO: Other draft pages like organize?
+
+DONE: Menu items - about, write, speak, collaborate, contact, books
+DONE: Individual posts
+DONE: Author page
+DONE: Tag pages
+DONE: Search functionality
+*/
