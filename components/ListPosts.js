@@ -1,7 +1,7 @@
 import { PostCardArticle } from "./PostCardArticle";
 import { HeroPost } from "./HeroPost";
 
-export const ListPosts = ({ posts, pinnedPost }) => {
+export const ListPosts = ({ posts, pinnedPost, page }) => {
   return (
     <section className="section pt-0">
       <div className="container-fluid">

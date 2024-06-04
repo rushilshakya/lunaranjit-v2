@@ -5,10 +5,10 @@ import { ListPosts } from "@/components/ListPosts";
 const contentType = "posts";
 const postsPerPage = 10;
 
-export default function Page({ pagePosts }) {
+export default function Page({ pagePosts, page }) {
   return (
     <Layout>
-      <ListPosts posts={pagePosts} />
+      <ListPosts posts={pagePosts} page={page} />
     </Layout>
   );
 }
@@ -38,6 +38,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       pagePosts,
+      page: params.slug,
     },
   };
 }

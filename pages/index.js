@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function Home({ remainingPosts, pinnedPost }) {
   return (
     <Layout>
-      <ListPosts posts={remainingPosts} pinnedPost={pinnedPost} />
+      <ListPosts posts={remainingPosts} pinnedPost={pinnedPost} page={"1"} />
     </Layout>
   );
 }
