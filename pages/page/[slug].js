@@ -1,15 +1,11 @@
-import { getAllPageNbrs, getSortedData, getTotalPages } from "@/lib/getData";
+import { getAllPageNbrs, getDataForStaticPropsForPage } from "@/lib/getData";
 import { ListPosts } from "@/components/ListPosts";
-import { getPostsPerPage } from "@/lib/utilities";
-import { getDefaultContentType } from "@/lib/utilities";
+import { getPostsPerPage, getDefaultContentType } from "@/lib/utilities";
 
-const contentType = getDefaultContentType();
-const postsPerPage = getPostsPerPage();
-
-export default function Page({ pagePosts, currentPage, totalPages }) {
+export default function Page({ posts, currentPage, totalPages }) {
   return (
     <ListPosts
-      posts={pagePosts}
+      posts={posts}
       currentPage={currentPage}
       totalPages={totalPages}
     />
@@ -17,7 +13,7 @@ export default function Page({ pagePosts, currentPage, totalPages }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPageNbrs(contentType, postsPerPage);
+  const paths = getAllPageNbrs(getDefaultContentType(), getPostsPerPage());
   return {
     paths,
     fallback: false,
@@ -32,18 +28,16 @@ export async function getStaticProps({ params }) {
       },
     };
   }
-  const allPosts = getSortedData(contentType);
-  const pagePosts = allPosts.slice(
-    postsPerPage * (params.slug - 1),
-    postsPerPage * params.slug
+  const staticProps = getDataForStaticPropsForPage(
+    params.slug,
+    getPostsPerPage(),
+    getDefaultContentType()
   );
-  const totalPages = getTotalPages(contentType, postsPerPage);
 
   return {
     props: {
-      pagePosts,
+      ...staticProps,
       currentPage: params.slug,
-      totalPages,
     },
   };
 }

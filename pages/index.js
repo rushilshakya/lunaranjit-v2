@@ -1,25 +1,23 @@
 import { ListPosts } from "@/components/ListPosts";
-import { getSortedData, getTotalPages } from "@/lib/getData";
+import { getDataForStaticPropsForPage } from "@/lib/getData";
+import { getDefaultContentType, getPostsPerPage } from "@/lib/utilities";
 
 export async function getStaticProps() {
-  const allPosts = getSortedData("posts");
-  const pinnedPost = allPosts.find((x) => x.pinned === true);
-  const remainingPosts = allPosts.filter((x) => x.id !== pinnedPost.id);
-  const totalPages = getTotalPages("posts");
+  const staticProps = getDataForStaticPropsForPage(
+    "1",
+    getPostsPerPage(),
+    getDefaultContentType()
+  );
 
   return {
-    props: {
-      remainingPosts,
-      pinnedPost,
-      totalPages,
-    },
+    props: { ...staticProps },
   };
 }
 
-export default function Home({ remainingPosts, pinnedPost, totalPages }) {
+export default function Home({ posts, pinnedPost, totalPages }) {
   return (
     <ListPosts
-      posts={remainingPosts}
+      posts={posts}
       pinnedPost={pinnedPost}
       currentPage={"1"}
       totalPages={totalPages}
@@ -28,9 +26,9 @@ export default function Home({ remainingPosts, pinnedPost, totalPages }) {
 }
 
 /*
-TODO: Exclude pinned post
 TODO: Remaining toml files
 
+DONE: Exclude pinned post
 DONE: Pagination
 DONE: Menu items - about, write, speak, collaborate, contact, books
 DONE: Individual posts
