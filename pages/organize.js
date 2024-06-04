@@ -3,7 +3,7 @@ import MenuLevelPage from "@/components/MenuLevelPage";
 import { getContentForPage } from "@/lib/getData";
 
 export async function getStaticProps() {
-  const pageData = getContentForPage("collaborate");
+  const pageData = getContentForPage("organize");
 
   return {
     props: {
@@ -12,7 +12,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Collaborate({ pageData }) {
+export default function Organize({ pageData }) {
   return (
     <Layout>
       <MenuLevelPage pageData={pageData} />

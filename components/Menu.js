@@ -73,8 +73,8 @@ export const Menu = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/collaborate">
-                  Collaborating
+                <Link className="nav-link" href="/organize">
+                  Organizing
                 </Link>
               </li>
               <li className="nav-item">
