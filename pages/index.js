@@ -33,11 +33,12 @@ export default function Home({ remainingPosts, pinnedPost }) {
 
 /*
 TODO: Pagination
-TODO: Other draft pages like organize?
+TODO: Remaining toml files
 
 DONE: Menu items - about, write, speak, collaborate, contact, books
 DONE: Individual posts
 DONE: Author page
 DONE: Tag pages
 DONE: Search functionality
+DONE: Other draft pages like organize?
 */
