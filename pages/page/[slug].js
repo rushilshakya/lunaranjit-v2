@@ -8,13 +8,7 @@ const postsPerPage = 10;
 export default function Page({ pagePosts }) {
   return (
     <Layout>
-      <section className="section pt-0">
-        <div className="container-fluid">
-          <div className="row-lr">
-            {pagePosts.length > 0 && <ListPosts posts={pagePosts} />}
-          </div>
-        </div>
-      </section>
+      <ListPosts posts={pagePosts} />
     </Layout>
   );
 }

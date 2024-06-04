@@ -1,39 +1,21 @@
-import { urlize, getSummary } from "@/lib/utilities";
-import Image from "next/image";
-import Link from "next/link";
+import { PostCardArticle } from "./PostCardArticle";
+import { HeroPost } from "./HeroPost";
 
-export const ListPosts = ({ posts }) => {
+export const ListPosts = ({ posts, pinnedPost }) => {
   return (
-    <div className="articlewrap">
-      {posts.map((post) => (
-        <article key={post.id}>
-          <Image
-            src={`/${post.image}`}
-            alt={post.title}
-            width={544.664}
-            height={200}
-          />
-          <div className="caption">
-            <h3>
-              <Link href={`/post/${post.id}`}>{post.title}</Link>
-            </h3>
-            {post.tags.length > 0 && (
-              <ul className="list-inline post-meta">
-                <li className="list-inline-item">
-                  <i className="ti-tag"></i>
-                </li>
-
-                {post.tags.map((tag, i) => (
-                  <li className="list-inline-item" key={i}>
-                    <Link href={`/tag/${urlize(tag)}`}>{tag}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-            <p>{post.summary ? post.summary : getSummary(post.content)}</p>
-          </div>
-        </article>
-      ))}
-    </div>
+    <section className="section pt-0">
+      <div className="container-fluid">
+        <div className="row-lr">
+          {pinnedPost && <HeroPost post={pinnedPost} />}
+          {posts.length > 0 && (
+            <div className="articlewrap">
+              {posts.map((post) => (
+                <PostCardArticle post={post} key={post.id} />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
   );
 };
