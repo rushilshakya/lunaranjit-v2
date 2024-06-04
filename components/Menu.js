@@ -114,11 +114,6 @@ export const Menu = () => {
                   />
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="/books">
-                  Alien
-                </Link>
-              </li>
             </ul>
             <div className="search">
               <button

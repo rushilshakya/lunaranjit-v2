@@ -1,7 +1,7 @@
 +++
 author = "Luna Ranjit"
 categories = []
-date = "2021-03-07T18:15:00Z"
+date = "2024-03-07T18:15:00Z"
 description = ""
 first_published_in = false
 image = "images/feministmanifesto2.png"
@@ -13,6 +13,7 @@ tags = ["Poetry"]
 title = "feminist manifesto"
 
 +++
+
 not interested in feminism  
 seeped in racist thought  
 nor to fight for women’s rights  

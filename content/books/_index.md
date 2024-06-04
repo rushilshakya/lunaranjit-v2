@@ -2,8 +2,8 @@
 title: taking time for long-term reflection and writing projects
 description: This is meta description.
 type: menu
-
 ---
+
 **work in progress**
 
 <br>
@@ -29,8 +29,6 @@ Collection of poems and explanatory commas about the collateral damage of capita
 **translation**
 
 Creating literary work into and out of English, Nepal Bhasa, and Khas Nepali.
-
-We Lived Happily During The War by Ilya Kaminsky, translated into Khas Nepali (published in JhanNaya, 2001)
 
 <br><br>
 

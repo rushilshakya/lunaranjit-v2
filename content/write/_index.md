@@ -26,11 +26,15 @@ type: menu
 
 "[**they come in pairs**](https://lunaranjit.medium.com/they-come-in-pairs-d04896a7d7f6)," _Medium_
 
+**We Lived Happily During The War** by Ilya Kaminsky, translated into Khas Nepali (published in JhanNaya, 2001)
+
 <br>
 
 **prose**
 
-"[**नेवा: समुदायभित्रै छन् रूपा, करूणा र दीपाहरू**](https://www.setopati.com/opinion/243673)," Setopati
+"[**Growing Nepali Roots in Hostile Soils**](https://www.saada.org/tides/article/nepali-roots-in-hostile-soils)," _SAADA_
+
+"[**नेवा: समुदायभित्रै छन् रूपा, करूणा र दीपाहरू**](https://www.setopati.com/opinion/243673)," _Setopati_
 
 "[**सीमान्तकरणको वास्तविकता र योग्यतातन्त्रको मिथक**](https://jhannaya.nayapatrikadaily.com/news-details/1406/2021-06-26)," _Jhan Naya_
 
@@ -60,4 +64,4 @@ type: menu
 
 For more writing, please visit: [https://lunaranjit.medium.com/](https://lunaranjit.medium.com/ "https://lunaranjit.medium.com/")
 
-Please [**share your email**](https://tinyletter.com/LunaRanjit) if you would like to receive my sporadic email updates about new writing and musings.
+Please [**share your email**](http://tinyletter.com/LunaRanjit) if you would like to receive my sporadic email updates about new writing and musings.

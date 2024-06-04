@@ -7,27 +7,19 @@ type: menu
 draft: false
 ---
 
-Luna has organized alongside immigrant workers
-
 #### **issues & campaigns**
-
-**workers' rights**
 
 - New York State Domestic Workers' Bill of Rights
 - International Domestic Workers' Convention
 - New York State Nail Salon Workers' Rights
 - New York City Paid Sick Leave
-
-**immigrant rights**
-
-- New York State Drivers' License for All
-- Pathway to Citizenship for all immigrants
 - Temporary Protected Status (TPS) for Nepali nationals
-- Language Justice
 
 <br />
 
 #### **artistic collaborations**
+
+[**SAADA Archival Creators Fellowship**](https://www.saada.org/acfp2021), exploring caste and ethnicity within Nepali diaspora through oral history interviews and new digital archival materials from within the community
 
 **Reclaiming Our Tongues**, a public reading by Nepali writers with indigenous roots (in partnership with Rajan Maharjan, supported by NYC Artists Corps Grant 2021)
 
