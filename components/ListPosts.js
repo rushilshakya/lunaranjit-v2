@@ -1,5 +1,6 @@
 import { PostCardArticle } from "./PostCardArticle";
 import { HeroPost } from "./HeroPost";
+import { Pagination } from "./Pagination";
 
 export const ListPosts = ({ posts, pinnedPost, page }) => {
   return (
@@ -14,6 +15,7 @@ export const ListPosts = ({ posts, pinnedPost, page }) => {
               ))}
             </div>
           )}
+          <Pagination page={page} />
         </div>
       </div>
     </section>
