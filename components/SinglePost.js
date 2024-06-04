@@ -3,6 +3,7 @@ import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { urlize } from "@/lib/utilities";
 import Link from "next/link";
+import rehypeExternalLinks from "rehype-external-links";
 
 export default function SinglePost({ postData }) {
   return (
@@ -29,7 +30,12 @@ export default function SinglePost({ postData }) {
           <div className="row">
             <div className="col-lg-8 mx-auto">
               <div className="content">
-                <Markdown rehypePlugins={[rehypeRaw]}>
+                <Markdown
+                  rehypePlugins={[
+                    rehypeRaw,
+                    [rehypeExternalLinks, { target: "_blank" }],
+                  ]}
+                >
                   {postData.content}
                 </Markdown>
               </div>

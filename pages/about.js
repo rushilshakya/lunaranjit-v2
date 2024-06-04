@@ -2,6 +2,8 @@ import { Layout } from "@/components/Layout";
 import { getContentForPage } from "@/lib/getData";
 import Markdown from "react-markdown";
 import Image from "next/image";
+import rehypeRaw from "rehype-raw";
+import rehypeExternalLinks from "rehype-external-links";
 
 export async function getStaticProps() {
   const aboutPage = getContentForPage("about");
@@ -37,7 +39,14 @@ export default function About({ aboutPage }) {
         <div className="container">
           <div className="col-lg-8 mx-auto">
             <div className="content">
-              <Markdown>{aboutPage.content}</Markdown>
+              <Markdown
+                rehypePlugins={[
+                  rehypeRaw,
+                  [rehypeExternalLinks, { target: "_blank" }],
+                ]}
+              >
+                {aboutPage.content}
+              </Markdown>
             </div>
           </div>
         </div>

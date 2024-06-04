@@ -2,6 +2,7 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import Link from "next/link";
+import rehypeExternalLinks from "rehype-external-links";
 
 export const AuthorDisplay = ({ author }) => {
   return (
@@ -32,7 +33,12 @@ export const AuthorDisplay = ({ author }) => {
               {author.content && (
                 <>
                   <hr />
-                  <Markdown rehypePlugins={[rehypeRaw]}>
+                  <Markdown
+                    rehypePlugins={[
+                      rehypeRaw,
+                      [rehypeExternalLinks, { target: "_blank" }],
+                    ]}
+                  >
                     {author.content}
                   </Markdown>
                 </>
@@ -43,7 +49,11 @@ export const AuthorDisplay = ({ author }) => {
                   <ul className="list-inline social-icons">
                     {author.social.map((socialMedia, i) => (
                       <li className="list-inline-item" key={i}>
-                        <Link href={socialMedia.link}>
+                        <Link
+                          href={socialMedia.link}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className={socialMedia.icon}></i>
                         </Link>
                       </li>

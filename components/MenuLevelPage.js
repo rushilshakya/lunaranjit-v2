@@ -1,5 +1,6 @@
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import rehypeExternalLinks from "rehype-external-links";
 
 export default function MenuLevelPage({ pageData }) {
   return (
@@ -17,7 +18,12 @@ export default function MenuLevelPage({ pageData }) {
         <div className="container">
           <div className="col-lg-8 mx-auto">
             <div className="content">
-              <Markdown rehypePlugins={[rehypeRaw]}>
+              <Markdown
+                rehypePlugins={[
+                  rehypeRaw,
+                  [rehypeExternalLinks, { target: "_blank" }],
+                ]}
+              >
                 {pageData.content}
               </Markdown>
             </div>

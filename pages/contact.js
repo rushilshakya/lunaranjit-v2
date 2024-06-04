@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { getContentForPage } from "@/lib/getData";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import rehypeExternalLinks from "rehype-external-links";
 
 export async function getStaticProps() {
   const pageData = getContentForPage("contact");
@@ -21,7 +22,12 @@ export default function Contact({ pageData }) {
           <div className="text-center">
             <h1 className="text-center display-3">{pageData.title}</h1>
             <div className="text-center">
-              <Markdown rehypePlugins={[rehypeRaw]}>
+              <Markdown
+                rehypePlugins={[
+                  rehypeRaw,
+                  [rehypeExternalLinks, { target: "_blank" }],
+                ]}
+              >
                 {pageData.content}
               </Markdown>
             </div>
