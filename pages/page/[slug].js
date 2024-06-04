@@ -1,15 +1,19 @@
 import { Layout } from "@/components/Layout";
-import { getAllPageNbrs, getSortedData } from "@/lib/getData";
+import { getAllPageNbrs, getSortedData, getTotalPages } from "@/lib/getData";
 import { ListPosts } from "@/components/ListPosts";
 import { getPostsPerPage } from "@/lib/utilities";
 
 const contentType = "posts";
 const postsPerPage = getPostsPerPage();
 
-export default function Page({ pagePosts, page }) {
+export default function Page({ pagePosts, currentPage, totalPages }) {
   return (
     <Layout>
-      <ListPosts posts={pagePosts} page={page} />
+      <ListPosts
+        posts={pagePosts}
+        currentPage={currentPage}
+        totalPages={totalPages}
+      />
     </Layout>
   );
 }
@@ -30,16 +34,18 @@ export async function getStaticProps({ params }) {
       },
     };
   }
-  const allPosts = getSortedData("posts");
+  const allPosts = getSortedData(contentType);
   const pagePosts = allPosts.slice(
     postsPerPage * (params.slug - 1),
     postsPerPage * params.slug
   );
+  const totalPages = getTotalPages(contentType, postsPerPage);
 
   return {
     props: {
       pagePosts,
-      page: params.slug,
+      currentPage: params.slug,
+      totalPages,
     },
   };
 }

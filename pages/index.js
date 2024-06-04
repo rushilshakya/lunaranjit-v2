@@ -1,24 +1,31 @@
 import { Layout } from "@/components/Layout";
 import { ListPosts } from "@/components/ListPosts";
-import { getSortedData } from "@/lib/getData";
+import { getSortedData, getTotalPages } from "@/lib/getData";
 
 export async function getStaticProps() {
   const allPosts = getSortedData("posts");
   const pinnedPost = allPosts.find((x) => x.pinned === true);
   const remainingPosts = allPosts.filter((x) => x.id !== pinnedPost.id);
+  const totalPages = getTotalPages("posts");
 
   return {
     props: {
       remainingPosts,
       pinnedPost,
+      totalPages,
     },
   };
 }
 
-export default function Home({ remainingPosts, pinnedPost }) {
+export default function Home({ remainingPosts, pinnedPost, totalPages }) {
   return (
     <Layout>
-      <ListPosts posts={remainingPosts} pinnedPost={pinnedPost} page={"1"} />
+      <ListPosts
+        posts={remainingPosts}
+        pinnedPost={pinnedPost}
+        currentPage={"1"}
+        totalPages={totalPages}
+      />
     </Layout>
   );
 }

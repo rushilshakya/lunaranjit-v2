@@ -2,7 +2,7 @@ import { PostCardArticle } from "./PostCardArticle";
 import { HeroPost } from "./HeroPost";
 import { Pagination } from "./Pagination";
 
-export const ListPosts = ({ posts, pinnedPost, page }) => {
+export const ListPosts = ({ posts, pinnedPost, currentPage, totalPages }) => {
   return (
     <section className="section pt-0">
       <div className="container-fluid">
@@ -15,7 +15,7 @@ export const ListPosts = ({ posts, pinnedPost, page }) => {
               ))}
             </div>
           )}
-          <Pagination page={page} />
+          <Pagination currentPage={currentPage} totalPages={totalPages} />
         </div>
       </div>
     </section>
