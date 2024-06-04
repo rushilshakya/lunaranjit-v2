@@ -1,9 +1,10 @@
 import { Layout } from "@/components/Layout";
 import { getAllPageNbrs, getSortedData } from "@/lib/getData";
 import { ListPosts } from "@/components/ListPosts";
+import { getPostsPerPage } from "@/lib/utilities";
 
 const contentType = "posts";
-const postsPerPage = 10;
+const postsPerPage = getPostsPerPage();
 
 export default function Page({ pagePosts, page }) {
   return (
