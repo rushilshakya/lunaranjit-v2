@@ -1,8 +1,23 @@
 import { getAllPageNbrs, getDataForStaticPropsForPage } from "@/lib/getData";
 import { ListPosts } from "@/components/ListPosts";
 import { getPostsPerPage, getDefaultContentType } from "@/lib/utilities";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-export default function Page({ posts, currentPage, totalPages, pinnedPost }) {
+export default function Page({
+  posts,
+  currentPage,
+  totalPages,
+  pinnedPost,
+  redirectTo,
+}) {
+  const router = useRouter();
+  useEffect(() => {
+    if (redirectTo) {
+      router.push(redirectTo);
+    }
+  });
+
   return (
     <ListPosts
       posts={posts}
@@ -32,6 +47,7 @@ export async function getStaticProps({ params }) {
     props: {
       ...staticProps,
       currentPage: params.slug,
+      redirectTo: params.slug == "1" ? "/" : null,
     },
   };
 }
