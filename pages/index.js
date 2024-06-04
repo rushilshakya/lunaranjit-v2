@@ -26,10 +26,10 @@ export default function Home({ posts, pinnedPost, totalPages }) {
 }
 
 /*
-TODO: 404 page
 TODO: Tiny letter doesn't work anymore
 TODO: Links in content to be differentiated?
 
+DONE: 404 page
 DONE: External links to open in new tab
 DONE: Remaining toml files
 DONE: Exclude pinned post
