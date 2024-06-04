@@ -28,6 +28,7 @@ export default function Home({ posts, pinnedPost, totalPages }) {
 /*
 TODO: Tiny letter doesn't work anymore
 TODO: Links in content to be differentiated?
+TODO: configure tina
 
 DONE: 404 page
 DONE: External links to open in new tab
