@@ -1,4 +1,3 @@
-import { Layout } from "@/components/Layout";
 import { ListPosts } from "@/components/ListPosts";
 import { getSortedData, getTotalPages } from "@/lib/getData";
 
@@ -19,21 +18,20 @@ export async function getStaticProps() {
 
 export default function Home({ remainingPosts, pinnedPost, totalPages }) {
   return (
-    <Layout>
-      <ListPosts
-        posts={remainingPosts}
-        pinnedPost={pinnedPost}
-        currentPage={"1"}
-        totalPages={totalPages}
-      />
-    </Layout>
+    <ListPosts
+      posts={remainingPosts}
+      pinnedPost={pinnedPost}
+      currentPage={"1"}
+      totalPages={totalPages}
+    />
   );
 }
 
 /*
-TODO: Pagination
+TODO: Exclude pinned post
 TODO: Remaining toml files
 
+DONE: Pagination
 DONE: Menu items - about, write, speak, collaborate, contact, books
 DONE: Individual posts
 DONE: Author page

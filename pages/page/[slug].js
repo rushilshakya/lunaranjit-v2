@@ -1,4 +1,3 @@
-import { Layout } from "@/components/Layout";
 import { getAllPageNbrs, getSortedData, getTotalPages } from "@/lib/getData";
 import { ListPosts } from "@/components/ListPosts";
 import { getPostsPerPage } from "@/lib/utilities";
@@ -8,13 +7,11 @@ const postsPerPage = getPostsPerPage();
 
 export default function Page({ pagePosts, currentPage, totalPages }) {
   return (
-    <Layout>
-      <ListPosts
-        posts={pagePosts}
-        currentPage={currentPage}
-        totalPages={totalPages}
-      />
-    </Layout>
+    <ListPosts
+      posts={pagePosts}
+      currentPage={currentPage}
+      totalPages={totalPages}
+    />
   );
 }
 
