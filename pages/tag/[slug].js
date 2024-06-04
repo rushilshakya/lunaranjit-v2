@@ -3,8 +3,9 @@ import { getAllTags, getPostsForTag } from "@/lib/getData";
 import { HeroPost } from "@/components/HeroPost";
 import { urlize } from "@/lib/utilities";
 import { PostCard } from "@/components/PostCard";
+import { getDefaultContentType } from "@/lib/utilities";
 
-const contentType = "posts";
+const contentType = getDefaultContentType();
 
 export default function Tag({ tag, postsForTag }) {
   return (

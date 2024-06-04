@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import { PostCard } from "@/components/PostCard";
 import { getSortedData } from "@/lib/getData";
 import { useSearchParams } from "next/navigation";
+import { getDefaultContentType } from "@/lib/utilities";
 
 export async function getStaticProps() {
-  const allPosts = getSortedData("posts");
+  const allPosts = getSortedData(getDefaultContentType());
 
   return {
     props: {

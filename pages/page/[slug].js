@@ -1,8 +1,9 @@
 import { getAllPageNbrs, getSortedData, getTotalPages } from "@/lib/getData";
 import { ListPosts } from "@/components/ListPosts";
 import { getPostsPerPage } from "@/lib/utilities";
+import { getDefaultContentType } from "@/lib/utilities";
 
-const contentType = "posts";
+const contentType = getDefaultContentType();
 const postsPerPage = getPostsPerPage();
 
 export default function Page({ pagePosts, currentPage, totalPages }) {

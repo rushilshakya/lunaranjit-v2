@@ -2,8 +2,9 @@ import { Layout } from "@/components/Layout";
 import { getAllAuthorIDs, getAuthorPostsFromAuthorID } from "@/lib/getData";
 import { AuthorDisplay } from "@/components/AuthorDisplay";
 import { PostCard } from "@/components/PostCard";
+import { getDefaultContentType } from "@/lib/utilities";
 
-const contentType = "posts";
+const contentType = getDefaultContentType();
 
 export default function Author({ author, posts }) {
   return (
