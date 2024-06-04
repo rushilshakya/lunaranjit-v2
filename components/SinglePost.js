@@ -11,7 +11,7 @@ export default function SinglePost({ postData }) {
         <div className="container-fluid-lr">
           <div className="post">
             <Image
-              src={`/${postData.image}`}
+              src={postData.image}
               className="img-pinned-title"
               alt={postData.title}
               width={1650}

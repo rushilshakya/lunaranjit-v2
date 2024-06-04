@@ -22,7 +22,7 @@ export default function About({ aboutPage }) {
             <div className="col-lg-8 mx-auto text-center">
               <h1 className="text-center"></h1>
               <Image
-                src={`/${aboutPage.image}`}
+                src={aboutPage.image}
                 alt="author"
                 className="author-img"
                 width={250}

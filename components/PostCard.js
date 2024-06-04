@@ -7,7 +7,7 @@ export const PostCard = ({ post, imgWidth, imgHeight }) => {
     <div className="col-md-6 mb-4">
       <div className="post post-sm">
         <Image
-          src={`/${post.image}`}
+          src={post.image}
           className="img-not-pinned"
           alt={post.title}
           width={imgWidth}

@@ -5,12 +5,7 @@ import Link from "next/link";
 export const PostCardArticle = ({ post }) => {
   return (
     <article>
-      <Image
-        src={`/${post.image}`}
-        alt={post.title}
-        width={544.664}
-        height={200}
-      />
+      <Image src={post.image} alt={post.title} width={544.664} height={200} />
       <div className="caption">
         <h3>
           <Link href={`/post/${post.id}`}>{post.title}</Link>

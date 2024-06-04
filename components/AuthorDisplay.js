@@ -13,7 +13,7 @@ export const AuthorDisplay = ({ author }) => {
               <figure>
                 {author.image && (
                   <Image
-                    src={`/${author.image}`}
+                    src={author.image}
                     className="rounded-circle img-fluid mb-4"
                     style={{
                       height: "150px",

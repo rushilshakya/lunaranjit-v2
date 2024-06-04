@@ -7,7 +7,7 @@ export const HeroPost = ({ post }) => {
     <div className="col-12 mb-4">
       <div className="post">
         <Image
-          src={`/${post.image}`}
+          src={post.image}
           className="img-pinned-title"
           alt={post.title}
           width={1650}
