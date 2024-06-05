@@ -34,11 +34,38 @@ export default defineConfig({
         path: "content/post",
         fields: [
           {
+            type: "datetime",
+            name: "date",
+            label: "date",
+            required: true,
+            ui: {
+              timeFormat: "HH:mm",
+            },
+          },
+          {
             type: "string",
             name: "title",
             label: "Title",
             isTitle: true,
             required: true,
+          },
+          {
+            type: "reference",
+            name: "author",
+            label: "author",
+            required: true,
+            collections: ["author"],
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "image",
+            ui: {
+              parse(value) {
+                //add leading slash to value if it doesnt exist
+                return value.startsWith("/") ? value : `/${value}`;
+              },
+            },
           },
           {
             type: "rich-text",
@@ -51,6 +78,61 @@ export default defineConfig({
           // This is an DEMO router. You can remove this to fit your site
           router: ({ document }) => `/demo/blog/${document._sys.filename}`,
         },
+      },
+      {
+        name: "author",
+        label: "Authors",
+        path: "content/author",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "email",
+            label: "email",
+            required: true,
+          },
+          {
+            type: "object",
+            name: "social",
+            label: "social",
+            list: true,
+            fields: [
+              {
+                label: "icon",
+                name: "icon",
+                type: "string",
+              },
+              {
+                label: "link",
+                name: "link",
+                type: "string",
+              },
+            ],
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "image",
+            ui: {
+              parse(value) {
+                //add leading slash to value if it doesnt exist
+                return value.startsWith("/") ? value : `/${value}`;
+              },
+            },
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
       },
     ],
   },
