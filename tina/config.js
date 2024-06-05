@@ -80,6 +80,10 @@ export default defineConfig({
           },
           {
             type: "string",
+            name: "summary",
+          },
+          {
+            type: "string",
             name: "tags",
             label: "tags",
             list: true,
