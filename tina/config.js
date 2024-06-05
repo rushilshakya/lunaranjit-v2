@@ -36,7 +36,6 @@ export default defineConfig({
           {
             type: "datetime",
             name: "date",
-            label: "date",
             required: true,
             ui: {
               timeFormat: "HH:mm",
@@ -45,16 +44,79 @@ export default defineConfig({
           {
             type: "string",
             name: "title",
-            label: "Title",
             isTitle: true,
             required: true,
           },
           {
             type: "reference",
             name: "author",
-            label: "author",
             required: true,
             collections: ["author"],
+          },
+          {
+            type: "boolean",
+            name: "pinned",
+          },
+          {
+            type: "boolean",
+            name: "draft",
+          },
+          {
+            type: "boolean",
+            name: "first_published_in",
+          },
+          {
+            type: "string",
+            name: "publication",
+          },
+          {
+            type: "string",
+            name: "publication_url",
+            ui: {
+              parse(value) {
+                return value.trim();
+              },
+            },
+          },
+          {
+            type: "string",
+            name: "tags",
+            label: "tags",
+            list: true,
+            options: [
+              {
+                value: "Essay",
+                label: "Essay",
+              },
+              {
+                value: "Poetry",
+                label: "Poetry",
+              },
+              {
+                value: "Caste Abolition",
+                label: "Caste Abolition",
+              },
+              {
+                value: "Worker",
+                label: "Worker",
+              },
+              {
+                value: "Pandemic",
+                label: "Pandemic",
+              },
+              {
+                value: "Immigrant",
+                label: "Immigrant",
+              },
+              {
+                value: "Feminism",
+                label: "Feminism",
+              },
+              {
+                value: "Update",
+                label: "Update",
+              },
+            ],
           },
           {
             type: "image",
