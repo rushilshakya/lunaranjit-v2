@@ -28,6 +28,7 @@ export default function Home({ posts, pinnedPost, totalPages }) {
 /*
 TODO: Tiny letter doesn't work anymore
 TODO: Links in content to be differentiated?
+TODO: Refactor menupage page level files
 TODO: Deploy -> netlify or aws?
 TODO: configure tina
 
