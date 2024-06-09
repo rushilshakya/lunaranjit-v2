@@ -6,7 +6,7 @@
     "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
     "build:next": "next build",
-    "gh": "next build && mv dist/server/pages dist1/ && git add dist1 -f && git commit -m 'gh-pages first commit!' && git push origin `git subtree split --prefix dist main`:gh-pages --force && git reset --hard HEAD~1",
+    "gh": "next build && mv dist/server/pages dist1 && git add dist1 -f && git commit -m 'gh-pages first commit!' && git push origin `git subtree split --prefix dist main`:gh-pages --force && git reset --hard HEAD~1",
     "start": "next start",
     "lint": "next lint"
   },
