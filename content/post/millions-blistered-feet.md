@@ -5,7 +5,7 @@ date: 2021-03-16T06:14:34.000Z
 title: Million Blistered Feet
 author: Luna Ranjit
 pinned: false
-draft: false
+draft: true
 tags:
   - Essay
   - Pandemic
