@@ -1,17 +1,17 @@
 ---
-title: Million Blistered Feet
-date: 2021-03-16T06:14:34.000+00:00
-image: "/images/img_5723.jpeg"
-author: Luna Ranjit
 description: This is meta description.
 categories: []
-pinned: true
+date: 2021-03-16T06:14:34.000Z
+title: Million Blistered Feet
+author: Luna Ranjit
+pinned: false
+draft: false
 tags:
-- Essay
-- Pandemic
-draft: true
-
+  - Essay
+  - Pandemic
+image: /images/img_5723.jpeg
 ---
+
 A year ago, countries around the world went into various levels of lockdown in their effort to keep the virus away. In Nepal, the borders, including airports, were closed with just a day’s notice. Public transportation was suspended. Chaos ensued as the government and the people tried to make sense of what next. I was in Kathmandu at that time, with a ticket to leave in two weeks’ time. With no option to travel, I stayed indoors adjusting my life to the “new normal” along with the rest of the country and the world.
 
 While the comfortable classes cribbed about not getting our doctor-recommended trainer-assisted exercise, we started hearing about another group of people who started walking. Migrant workers, who had left home in search of a better life in the cities and towns far away, were left without jobs or money for rent, with only prospects of hunger looming ahead. Their already precarious lives were turned upside down. So, they trudged back home, carrying all their worldly possessions crammed into canvas bags and plastic — an exodus of families, young children and elderly grandparents, pregnant women and nursing mothers, forced to walk hundreds of miles in scorching heat.
