@@ -27,6 +27,7 @@ export default function Home({ posts, pinnedPost, totalPages }) {
 
 /*
 TODO: Tiny letter doesn't work anymore
+TODO: Editable UI
 
 DONE: menu files editable through tina
 DONE: Hamburger menu not working
