@@ -1,30 +1,18 @@
-import { Layout } from "@/components/Layout";
-import { getContentForPage } from "@/lib/getData";
 import Markdown from "react-markdown";
 import Image from "next/image";
 import rehypeRaw from "rehype-raw";
 import rehypeExternalLinks from "rehype-external-links";
 
-export async function getStaticProps() {
-  const aboutPage = getContentForPage("about");
-
-  return {
-    props: {
-      aboutPage,
-    },
-  };
-}
-
-export default function About({ aboutPage }) {
+export default function AboutType({ pageData }) {
   return (
-    <Layout>
+    <>
       <section className="section-sm pb-0 bg-aliceblue">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto text-center">
               <h1 className="text-center"></h1>
               <Image
-                src={aboutPage.image}
+                src={pageData.image}
                 alt="author"
                 className="author-img"
                 width={250}
@@ -45,12 +33,12 @@ export default function About({ aboutPage }) {
                   [rehypeExternalLinks, { target: "_blank" }],
                 ]}
               >
-                {aboutPage.content}
+                {pageData.content}
               </Markdown>
             </div>
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

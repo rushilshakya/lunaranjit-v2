@@ -3,7 +3,7 @@ title:
   writing across and between boundaries of personal and political, state and
   society, United States and Nepal, poetry and prose
 description: This is meta description.
-type: menu
+type: Menu
 order: 3
 ---
 

@@ -1,22 +1,10 @@
-import { Layout } from "@/components/Layout";
-import { getContentForPage } from "@/lib/getData";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeExternalLinks from "rehype-external-links";
 
-export async function getStaticProps() {
-  const pageData = getContentForPage("contact");
-
-  return {
-    props: {
-      pageData,
-    },
-  };
-}
-
-export default function Contact({ pageData }) {
+export default function ContactType({ pageData }) {
   return (
-    <Layout>
+    <>
       <section className="section-sm bg-aliceblue">
         <div className="container">
           <div className="text-center">
@@ -102,6 +90,6 @@ export default function Contact({ pageData }) {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

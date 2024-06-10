@@ -2,7 +2,7 @@ import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypeExternalLinks from "rehype-external-links";
 
-export default function MenuLevelPage({ pageData }) {
+export default function MenuType({ pageData }) {
   return (
     <>
       <section className="section-sm bg-aliceblue">
