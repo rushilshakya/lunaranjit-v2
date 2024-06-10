@@ -27,8 +27,8 @@ export default function Home({ posts, pinnedPost, totalPages }) {
 
 /*
 TODO: Tiny letter doesn't work anymore
-TODO: menu files editable through tina
 
+DONE: menu files editable through tina
 DONE: Hamburger menu not working
 DONE: Refactor menupage page level files
 DONE: Fonts not appearing on netlify

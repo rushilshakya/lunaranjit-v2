@@ -200,6 +200,60 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "menu",
+        label: "Menu items",
+        path: "content/menu",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+          },
+          {
+            type: "image",
+            name: "image",
+            ui: {
+              parse(value) {
+                return value.startsWith("/") ? value : `/${value}`;
+              },
+            },
+          },
+          {
+            type: "string",
+            name: "type",
+            required: true,
+            options: [
+              {
+                value: "About",
+                label: "About",
+              },
+              {
+                value: "Menu",
+                label: "Menu",
+              },
+              {
+                value: "Contact",
+                label: "Contact",
+              },
+            ],
+          },
+          {
+            type: "number",
+            name: "order",
+            required: true,
+          },
+          {
+            type: "boolean",
+            name: "draft",
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+      },
     ],
   },
 });
