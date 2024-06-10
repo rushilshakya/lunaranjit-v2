@@ -4,6 +4,7 @@ import Image from "next/image";
 
 export const Menu = () => {
   const [showSearch, setShowSearch] = useState("");
+  const [showMobileMenu, setShowMobileMenu] = useState("");
 
   const showSearchBar = () => {
     return (
@@ -47,10 +48,19 @@ export const Menu = () => {
             type="button"
             data-toggle="collapse"
             data-target="#navigation"
+            onClick={() =>
+              showMobileMenu === ""
+                ? setShowMobileMenu("show")
+                : setShowMobileMenu("")
+            }
           >
             <i className="ti-menu"></i>
           </button>
-          <div className="collapse navbar-collapse text-center" id="navigation">
+          <div
+            className={`collapse navbar-collapse text-center ${showMobileMenu}`}
+            id="navigation"
+            onClick={() => setShowMobileMenu("")}
+          >
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link className="nav-link" href="/">
