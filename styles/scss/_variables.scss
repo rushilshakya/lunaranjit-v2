@@ -14,5 +14,5 @@ $light: #fbfbfb;
 $fire: red;
 
 // Font Variables
-$primary-font: "Playfair Display", sans-serif;
+$primary-font: var(--font-playfairDisplay), sans-serif;
 $icon-font: "themify";
