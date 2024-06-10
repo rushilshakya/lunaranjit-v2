@@ -2,6 +2,7 @@
 title: taking time for long-term reflection and writing projects
 description: This is meta description.
 type: menu
+draft: true
 ---
 
 **work in progress**
