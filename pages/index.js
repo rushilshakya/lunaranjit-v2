@@ -28,8 +28,8 @@ export default function Home({ posts, pinnedPost, totalPages }) {
 /*
 TODO: Tiny letter doesn't work anymore
 TODO: Hamburger menu not working
-TODO: Refactor menupage page level files
 
+DONE: Refactor menupage page level files
 DONE: Fonts not appearing on netlify
 DONE: Links in content to be differentiated?
 DONE: Deploy -> netlify or aws? previously aws, now on netlify
