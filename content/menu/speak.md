@@ -1,7 +1,7 @@
 ---
 title: grabbing the mic and passing it on
 description: This is meta description.
-type: menu
+type: Menu
 order: 4
 ---
 

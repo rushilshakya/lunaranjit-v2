@@ -3,7 +3,7 @@ title:
   exploring intersecting issues of justice with a transnational lens, focusing
   on race, caste, class, and gender
 description: This is meta description.
-type: menu
+type: Menu
 order: 5
 draft: false
 ---
