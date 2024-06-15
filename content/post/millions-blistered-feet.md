@@ -3,7 +3,7 @@ description: This is meta description.
 categories: []
 date: 2021-03-16T06:14:34.000Z
 title: Million Blistered Feet
-author: Luna Ranjit
+author: content/author/luna-ranjit.md
 pinned: false
 draft: true
 tags:
