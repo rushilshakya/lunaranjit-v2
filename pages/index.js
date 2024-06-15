@@ -20,10 +20,9 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts, pinnedPost, totalPages, result }) {
-  console.log(result);
   return (
     <>
-      hello
+      hello {result.data.post.author.title}
       <ListPosts
         posts={posts}
         pinnedPost={pinnedPost}
