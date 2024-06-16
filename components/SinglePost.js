@@ -7,7 +7,7 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 export default function SinglePost({ postData }) {
   return (
     <>
-      <section>
+      <section data-tina-field={tinaField(postData, "image")}>
         <div className="container-fluid-lr">
           <div className="post">
             <Image
@@ -19,7 +19,12 @@ export default function SinglePost({ postData }) {
             />
 
             <div className="post-content">
-              <h2 className="post-title">{postData.title}</h2>
+              <h2
+                className="post-title"
+                data-tina-field={tinaField(postData, "title")}
+              >
+                {postData.title}
+              </h2>
             </div>
           </div>
         </div>
@@ -28,7 +33,10 @@ export default function SinglePost({ postData }) {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
-              <div className="content">
+              <div
+                className="content"
+                data-tina-field={tinaField(postData, "body")}
+              >
                 <TinaMarkdown
                   content={postData.body}
                   components={{
@@ -60,7 +68,12 @@ export default function SinglePost({ postData }) {
                 <span>
                   <i className="ti-user mr-2"></i>
                   {postData.author._sys.filename === "luna-ranjit" ? (
-                    <Link href="/about">{postData.author.title}</Link>
+                    <Link
+                      href="/about"
+                      data-tina-field={tinaField(postData, "author")}
+                    >
+                      {postData.author.title}
+                    </Link>
                   ) : (
                     <Link href={`/author/${postData.author._sys.filename}`}>
                       {postData.author.title}
