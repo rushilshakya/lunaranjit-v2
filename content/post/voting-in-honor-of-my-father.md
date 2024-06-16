@@ -1,19 +1,19 @@
 ---
-title: Voting in honor of my father
-date: 2020-11-03T06:14:34.000+00:00
-image: images/ivoted.jpeg
-author: Luna Ranjit
 description: This is meta description.
 categories: []
-tags:
-- essay
-- immigrant
+date: 2020-11-03T06:14:00.000Z
+title: Voting in honor of my father
+author: content/author/luna-ranjit.md
 pinned: false
 first_published_in: false
 publication: Jacobin
-publication_url: https://jacobinmag.com
-
+publication_url: 'https://jacobinmag.com'
+tags:
+  - essay
+  - immigrant
+image: /images/ivoted.jpeg
 ---
+
 In the cool morning of November 8, 2016, I stood in line at the Joseph Pulitzer Intermediate School 145 in Jackson Heights, Queens, New York to cast the very first ballot of my life. I carefully filled out the bubbles on the ballot, thinking about my father. It had been exactly twenty-two months since he had passed.
 
 I never got to vote while my father was alive because I was not old enough while living in Nepal, my country of birth, and I did not have U.S. citizenship for the first two decades of living and working here. When I finally got my right to vote, after years of supporting others to engage in the electoral process, I was thrilled about finally being able to participate in the electoral process but not about the candidates. My vote ended up being symbolic anyway, unable to change the election results that shocked the world. I still wish I could share my experience as a first time voter with my father, my political idol who taught me by example to question the status quo and rise up for justice.

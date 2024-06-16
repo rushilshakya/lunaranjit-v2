@@ -1,17 +1,17 @@
 +++
-author = "Luna Ranjit"
-categories = []
-date = "2020-04-07T18:15:00Z"
+categories = [ ]
 description = ""
-first_published_in = false
-image = "images/compassioncovid.jpeg"
+date = 2020-08-12T18:15:00.000Z
+title = "Compassion in the time of Covid-19"
+author = "content/author/luna-ranjit.md"
 pinned = false
+first_published_in = false
 publication = ""
 publication_url = ""
-tags = ["Essay"]
-title = "Compassion in the time of Covid-19"
-
+tags = [ "Essay" ]
+image = "/images/compassioncovid.jpeg"
 +++
+
 A few days ago, it was reported that the President of Nepal expressed concern about the Nepalis in the U.S. in her conversation with the Nepali Ambassador, as she did with other envoys in countries with large numbers of Nepalis. A lot of “progressive Nepalis,” including a few friends, jumped on her for not caring about the migrant workers stuck at the Indian border and only caring about those in the affluent country. Indeed, it is important to remind the President and the entire government about the plight of migrant workers who are stuck at the border (not just when they are stuck at the border, but let’s talk about it another day). **But is compassion in such short supply that we cannot care about both communities?**
 
 After all, Nepalis in the U.S. are seeing the crisis unfold in front of their eyes. What is still hypothetical in Nepal has been a reality in the U.S. for a while now. A Nepali man has died, most likely infected while working. A recent [New York Times coverage](https://www.nytimes.com/2020/04/09/nyregion/coronavirus-queens-corona-jackson-heights-elmhurst.html) of the crisis opened with his story. His wife and two of their children have also tested positive. Hundreds of Nepalis are infected, and thousands of Nepalis have lost their livelihoods, maybe permanently, and are staring at an uncertain future. The Jackson Heights-Elmhurst neighborhood of Queens, which has been the epicenter of the Covid-19 crisis in New York, in the country, and perhaps the world, is also home to a large number of Nepalis. The area has more than twice the rate of infection compared to other parts of the city and almost five times as much as the nation.
