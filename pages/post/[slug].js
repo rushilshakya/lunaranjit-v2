@@ -1,14 +1,17 @@
 import { Layout } from "@/components/Layout";
 import SinglePost from "@/components/SinglePost";
-import { getAllContentIds, getSingleContentFromSlug } from "@/lib/getData";
+import { getAllContentIds } from "@/lib/getData";
 import { getDefaultContentType } from "@/lib/utilities";
+import client from "@/tina/__generated__/client";
+import { useTina } from "tinacms/dist/react";
 
 const contentType = getDefaultContentType();
 
 export default function Post({ blogPost }) {
+  const { data } = useTina(blogPost);
   return (
     <Layout>
-      <SinglePost postData={blogPost} />
+      <SinglePost postData={data.post} />
     </Layout>
   );
 }
@@ -22,10 +25,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const blogPost = getSingleContentFromSlug(params.slug, contentType);
+  const result = await client.queries.post({
+    relativePath: `${params.slug}.md`,
+  });
   return {
     props: {
-      blogPost,
+      blogPost: result,
     },
   };
 }

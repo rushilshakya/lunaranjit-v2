@@ -1,9 +1,8 @@
-import Markdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { urlize } from "@/lib/utilities";
 import Link from "next/link";
-import rehypeExternalLinks from "rehype-external-links";
+import { tinaField } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 export default function SinglePost({ postData }) {
   return (
@@ -30,14 +29,19 @@ export default function SinglePost({ postData }) {
           <div className="row">
             <div className="col-lg-8 mx-auto">
               <div className="content">
-                <Markdown
-                  rehypePlugins={[
-                    rehypeRaw,
-                    [rehypeExternalLinks, { target: "_blank" }],
-                  ]}
-                >
-                  {postData.content}
-                </Markdown>
+                <TinaMarkdown
+                  content={postData.body}
+                  components={{
+                    a: (props) => (
+                      <a
+                        rel="nofollow"
+                        target="_blank"
+                        {...props}
+                        href={props.url}
+                      />
+                    ),
+                  }}
+                />
               </div>
               <div className="text-center mt-5">
                 {postData.tags.length > 0 && (
@@ -55,11 +59,11 @@ export default function SinglePost({ postData }) {
                 )}
                 <span>
                   <i className="ti-user mr-2"></i>
-                  {postData.author === "Luna Ranjit" ? (
-                    <Link href="/about">{postData.author}</Link>
+                  {postData.author._sys.filename === "luna-ranjit" ? (
+                    <Link href="/about">{postData.author.title}</Link>
                   ) : (
-                    <Link href={`/author/${postData.author}`}>
-                      {postData.author}
+                    <Link href={`/author/${postData.author._sys.filename}`}>
+                      {postData.author.title}
                     </Link>
                   )}
                 </span>
