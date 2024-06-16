@@ -22,7 +22,6 @@ export async function getStaticProps() {
 export default function Home({ posts, pinnedPost, totalPages, result }) {
   return (
     <>
-      hello {result.data.post.author.title}
       <ListPosts
         posts={posts}
         pinnedPost={pinnedPost}
