@@ -1,7 +1,7 @@
 +++
 categories = [ ]
 description = ""
-date = 2020-08-12T18:15:00.000Z
+date = "2020-08-12T18:15:00.000Z"
 title = "Compassion in the time of Covid-19"
 author = "content/author/luna-ranjit.md"
 pinned = false
