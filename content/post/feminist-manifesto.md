@@ -1,10 +1,10 @@
 +++
-author = "Luna Ranjit"
+author = "content/author/luna-ranjit.md"
 categories = []
 date = "2024-03-07T18:15:00Z"
 description = ""
 first_published_in = false
-image = "images/feministmanifesto2.png"
+image = "/images/feministmanifesto2.png"
 pinned = false
 publication = ""
 publication_url = ""

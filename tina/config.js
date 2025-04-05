@@ -31,7 +31,14 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
+        match: {
+          exclude:
+            "(millions-blistered-feet|two-arcs-of-my-immigration-story|voting-in-honor-of-my-father|निर्णय-निस्सन्तान-जीवन-यात्राको)",
+        },
         path: "content/post",
+        format: "md",
+        frontmatterFormat: "toml",
+        frontmatterDelimiters: "+++",
         fields: [
           {
             type: "datetime",
@@ -142,7 +149,129 @@ export default defineConfig({
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+          router: ({ document }) => `/post/${document._sys.filename}`,
+        },
+      },
+      {
+        name: "postYAML",
+        label: "Posts YAML",
+        path: "content/post",
+        format: "md",
+        match: {
+          include:
+            "(millions-blistered-feet|two-arcs-of-my-immigration-story|voting-in-honor-of-my-father|निर्णय-निस्सन्तान-जीवन-यात्राको)",
+        },
+        fields: [
+          {
+            type: "datetime",
+            name: "date",
+            required: true,
+            ui: {
+              timeFormat: "HH:mm",
+            },
+          },
+          {
+            type: "string",
+            name: "title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "reference",
+            name: "author",
+            required: true,
+            collections: ["author"],
+          },
+          {
+            type: "boolean",
+            name: "pinned",
+          },
+          {
+            type: "boolean",
+            name: "draft",
+          },
+          {
+            type: "boolean",
+            name: "first_published_in",
+          },
+          {
+            type: "string",
+            name: "publication",
+          },
+          {
+            type: "string",
+            name: "publication_url",
+            ui: {
+              parse(value) {
+                return value.trim();
+              },
+            },
+          },
+          {
+            type: "string",
+            name: "summary",
+          },
+          {
+            type: "string",
+            name: "tags",
+            label: "tags",
+            list: true,
+            options: [
+              {
+                value: "Essay",
+                label: "Essay",
+              },
+              {
+                value: "Poetry",
+                label: "Poetry",
+              },
+              {
+                value: "Caste Abolition",
+                label: "Caste Abolition",
+              },
+              {
+                value: "Worker",
+                label: "Worker",
+              },
+              {
+                value: "Pandemic",
+                label: "Pandemic",
+              },
+              {
+                value: "Immigrant",
+                label: "Immigrant",
+              },
+              {
+                value: "Feminism",
+                label: "Feminism",
+              },
+              {
+                value: "Update",
+                label: "Update",
+              },
+            ],
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "image",
+            ui: {
+              parse(value) {
+                //add leading slash to value if it doesnt exist
+                return value.startsWith("/") ? value : `/${value}`;
+              },
+            },
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/post/${document._sys.filename}`,
         },
       },
       {

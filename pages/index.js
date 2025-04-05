@@ -1,8 +1,13 @@
 import { ListPosts } from "@/components/ListPosts";
 import { getDataForStaticPropsForPage } from "@/lib/getData";
 import { getDefaultContentType, getPostsPerPage } from "@/lib/utilities";
+import client from "@/tina/__generated__/client";
 
 export async function getStaticProps() {
+  const result = await client.queries.post({
+    relativePath: "millions-blistered-feet.md",
+  });
+
   const staticProps = getDataForStaticPropsForPage(
     "1",
     getPostsPerPage(),
@@ -10,23 +15,26 @@ export async function getStaticProps() {
   );
 
   return {
-    props: { ...staticProps },
+    props: { ...staticProps, result },
   };
 }
 
-export default function Home({ posts, pinnedPost, totalPages }) {
+export default function Home({ posts, pinnedPost, totalPages, result }) {
   return (
-    <ListPosts
-      posts={posts}
-      pinnedPost={pinnedPost}
-      currentPage={"1"}
-      totalPages={totalPages}
-    />
+    <>
+      <ListPosts
+        posts={posts}
+        pinnedPost={pinnedPost}
+        currentPage={"1"}
+        totalPages={totalPages}
+      />
+    </>
   );
 }
 
 /*
 TODO: Tiny letter doesn't work anymore
+TODO: Editable UI
 
 DONE: menu files editable through tina
 DONE: Hamburger menu not working
