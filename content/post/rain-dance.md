@@ -1,10 +1,10 @@
 +++
-author = "Luna Ranjit"
+author = "content/author/luna-ranjit.md"
 categories = []
 date = "2021-08-31T18:15:00Z"
 description = ""
 first_published_in = false
-image = "images/img_8885.jpeg"
+image = "/images/img_8885.jpeg"
 pinned = false
 publication = " Bronx Memoir Project Volume V "
 publication_url = ""
@@ -13,6 +13,7 @@ tags = ["Poetry"]
 title = "Rain Dance"
 
 +++
+
 Every year,  
 monsoon winds arrive, soaking  
 the dusty, parched valley floor  

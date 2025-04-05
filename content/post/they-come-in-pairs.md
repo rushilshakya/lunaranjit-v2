@@ -1,11 +1,11 @@
 +++
-author = "Luna Ranjit"
+author = "content/author/luna-ranjit.md"
 categories = []
 date = "2020-04-30T18:15:00Z"
 description = ""
 draft = true
 first_published_in = false
-image = "images/theycomeinpairs.jpeg"
+image = "/images/theycomeinpairs.jpeg"
 pinned = false
 publication = ""
 publication_url = ""
@@ -13,6 +13,7 @@ tags = ["Poetry", "Worker"]
 title = "they come in pairs"
 
 +++
+
 statistics says  
 on average  
 two coffins  

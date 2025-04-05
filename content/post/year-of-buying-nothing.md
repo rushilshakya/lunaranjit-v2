@@ -1,10 +1,10 @@
 +++
-author = "Luna Ranjit"
+author = "content/author/luna-ranjit.md"
 categories = []
 date = "2019-12-23T18:15:00Z"
 description = ""
 first_published_in = false
-image = "images/nobuying.jpeg"
+image = "/images/nobuying.jpeg"
 pinned = false
 publication = ""
 publication_url = ""
@@ -13,6 +13,7 @@ tags = ["Essay"]
 title = "Year of Buying Nothing"
 
 +++
+
 Holiday season is upon us, and the festivities are accompanied by shopping sprees on adrenaline. Consumerism really seems to have become a new religion with the Black Friday and Cyber Monday as its holy days. In the past, I too would have gotten caught up in the frenzy. This year, however, I am surviving relatively unscathed as I am halfway through a year-long experiment of buying nothing but the essentials. I am not completely immune as friends and family members around me are still participating.
 
 I used to pride myself on being a conscious consumer, a bit of a minimalist even. My kitchen is full of mismatched glass jars used for drinking water and storing leftover food. I have resoled my favorite pair of boots multiple times. My winter coat has gotten me through almost fifteen New York winters. Heck, I had even gotten married in borrowed saris. Yet, when we were moving two years ago, I realized how much stuff I had accumulated. I came to the U.S. with two suitcases worth of clothes and personal items, almost all of my possessions in the world. Here I was two decades later, getting rid of more than that in a week.

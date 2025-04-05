@@ -1,10 +1,10 @@
 +++
-author = "Luna Ranjit"
+author = "content/author/luna-ranjit.md"
 categories = []
 date = "2020-08-14T04:00:00Z"
 description = ""
 first_published_in = false
-image = "images/dykesonbikesjh.jpeg"
+image = "/images/dykesonbikesjh.jpeg"
 pinned = false
 publication = ""
 publication_url = ""
@@ -13,6 +13,7 @@ tags = ["Poetry"]
 title = "home"
 
 +++
+
 _First published in Newtown Literary, Issue 16 (Spring/Summer 2020)._
 
 Go. Back. Home.  

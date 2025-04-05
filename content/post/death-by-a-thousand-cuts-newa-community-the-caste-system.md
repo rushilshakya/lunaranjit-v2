@@ -1,10 +1,10 @@
 +++
-author = "Luna Ranjit"
+author = "content/author/luna-ranjit.md"
 categories = []
 date = "2021-07-10T18:15:00Z"
 description = ""
 first_published_in = false
-image = "images/green_luna_moth_on_lichencovered_rock_actias_luna.jpeg"
+image = "/images/green_luna_moth_on_lichencovered_rock_actias_luna.jpeg"
 pinned = false
 publication = ""
 publication_url = ""
@@ -13,6 +13,7 @@ tags = ["Essay", "Caste Abolition"]
 title = "Death By A Thousand Cuts: Newa Community & The Caste System"
 
 +++
+
 Caste-based discrimination is in news once again in Kathmandu, propelled by the rare courage shown by Rupa Sunar to not quietly accept the fact that an “upper caste” family in Kathmandu refused to rent her rooms just based on her caste. Indeed, Rupa Sunar is not the first person to be refused room rental because of their caste, nor the first person to take legal action against caste-based discrimination in room rental. Karuna Bishwakarma and Deepa Nepali are two other examples of young Dalit women who spoke up and are still fighting for justice.
 
 The difference in this case is that the landlady is an “upper caste” Newa who belongs to an ethnic and linguistic minority that has long been oppressed by the state. There is no doubt some validity to the claim that the Khas Brahmin-dominated media has been gleefully fanning the fire, happy about the opportunity to deflect the criticism from themselves. But the fact remains that there was fire to begin with. Saraswati Pradhan has acknowledged that caste was the reason she could not rent to Rupa Sunar. It is irrelevant that she sounded very pleasant while delivering an unpleasant, and illegal, message. The situation was made worse by the fact the Education Minister, Krishna Gopal Shrestha, himself an “upper caste” Newa personally went in an official vehicle to get Saraswati Pradhan released. Furor increased, justifiably, not only among Khas Dalits but also caste-oppressed Newas and others committed to caste abolition because a representative of the state had publicly flaunted his power on behalf of the perpetrator.

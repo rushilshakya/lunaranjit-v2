@@ -1,10 +1,10 @@
 +++
-author = "Luna Ranjit"
+author = "content/author/luna-ranjit.md"
 categories = []
 date = "2020-06-30T18:15:00Z"
 description = ""
 first_published_in = false
-image = "images/ba_waving.jpeg"
+image = "/images/ba_waving.jpeg"
 pinned = false
 publication = ""
 publication_url = ""
@@ -13,6 +13,7 @@ tags = ["Poetry"]
 title = "hole in my heart"
 
 +++
+
 I would have  
 stayed on the phone forever if  
 I had known  
