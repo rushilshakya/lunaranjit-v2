@@ -133,6 +133,7 @@ export default defineConfig({
             type: "image",
             name: "image",
             label: "image",
+            required: true,
             ui: {
               parse(value) {
                 //add leading slash to value if it doesnt exist
