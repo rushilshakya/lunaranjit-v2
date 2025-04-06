@@ -136,11 +136,10 @@ export default defineConfig({
             required: true,
             ui: {
               parse(value) {
-                //replace multiple slashes with a single slash
-                console.log("value", value);
-
                 //add leading slash to value if it doesnt exist
-                return value.startsWith("/") ? value : `/${value}`;
+                return value.startsWith("/") || value.startsWith("https")
+                  ? value
+                  : `/${value}`;
               },
             },
           },
