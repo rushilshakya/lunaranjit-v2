@@ -9,6 +9,11 @@ const contentType = getDefaultContentType();
 
 export default function Post({ blogPost }) {
   const { data } = useTina(blogPost);
+  // If no tags, then create an empty array
+  if (!data.post.tags) {
+    data.post.tags = [];
+  }
+
   return (
     <Layout>
       <SinglePost postData={data.post} />
