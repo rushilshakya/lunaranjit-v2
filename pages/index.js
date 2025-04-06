@@ -33,6 +33,8 @@ export default function Home({ posts, pinnedPost, totalPages, result }) {
 }
 
 /*
+TODO: Capital in filename is not working
+TODO: New file has date without quotes
 TODO: Tiny letter doesn't work anymore
 TODO: Editable UI
 
