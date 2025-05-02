@@ -2,11 +2,11 @@
 date = 2025-04-30T18:15:00.000Z
 title = "Being Nepali: Layers of Identities, Marginalizations & Privileges"
 author = "content/author/luna-ranjit.md"
+draft = true
 publication = "SAADA Archival Creators Fellowship Program"
 publication_url = "https://www.saada.org/acfp/exhibit/being-nepali"
 tags = [ "Essay" ]
 +++
-
 
 Interviews: Luna Ranjit | Artwork: Untamed Anatomy
 
