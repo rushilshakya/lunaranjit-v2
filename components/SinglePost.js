@@ -10,13 +10,22 @@ export default function SinglePost({ postData }) {
       <section data-tina-field={tinaField(postData, "image")}>
         <div className="container-fluid-lr">
           <div className="post">
-            <Image
-              src={postData.image}
-              className="img-pinned-title"
-              alt={postData.title}
-              width={1650}
-              height={420}
-            />
+            {postData.image ? (
+              <Image
+                src={postData.image}
+                className="img-pinned-title"
+                alt={postData.title}
+                width={1650}
+                height={420}
+              />
+            ) : (
+              <div
+                className="img-pinned-title"
+                style={{
+                  backgroundColor: "#f0f0f0",
+                }}
+              ></div>
+            )}
 
             <div className="post-content">
               <h2
