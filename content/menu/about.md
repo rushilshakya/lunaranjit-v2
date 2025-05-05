@@ -1,12 +1,12 @@
 ---
-title: ""
-image: images/lr_headshot_2017.jpeg
 description: This is meta description.
+title: ''
+image: /imagesimages/lr_headshot_2017.jpeg
 type: About
 order: 2
 ---
 
-Luna is a writer and an organizer. She explores intersecting issues of social justice with a transnational lens, focusing on race, caste, class, and gender. She currently based in Kathmandu.
+Luna is a writer and an organizer. She explores intersecting issues of social justice with a transnational lens, focusing on race, caste, class, and gender. She is currently based in Kathmandu.
 
 <br>
 
