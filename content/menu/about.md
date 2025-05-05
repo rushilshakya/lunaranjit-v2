@@ -10,7 +10,7 @@ Luna is a writer and an organizer. She explores intersecting issues of social ju
 
 <br>
 
-She writes across and between boundaries of personal and political, state and society, US and Nepal, poetry and prose. She has written about and been featured in print and broadcast media on the issues related to workers’ rights, migrant rights, language justice, gender, caste and racial justice. She is a former Ms. Foundation Public Voices fellow, and a recipient of 2021 Queens Art Fund grant for "Alien," a hybrid immigrant narrative.
+Luna writes across and between boundaries of personal and political, state and society, US and Nepal, poetry and prose. She has written about and been featured in print and broadcast media on the interconnected issues of justice, focused on class, caste/ethnicity, and gender. She is a former Ms. Foundation Public Voices fellow, and a recipient of 2021 Queens Art Fund grant for "Alien," a hybrid immigrant narrative.
 
 <br>
 
@@ -18,7 +18,7 @@ Luna is a co-founder and former executive director of [Adhikaar](www.adhikaar.or
 
 <br>
 
-Her groundbreaking work has been recognized by many community-based, national, and international organizations. In 2016, she received the [Grinnell Prize](https://www.grinnell.edu/about/grinnellprize) that supports and inspires innovative social change makers throughout the world, and she was included in [City of Women](https://www.newyorker.com/books/page-turner/city-of-women), an alternative New York City subway map recognizing women's contributions.
+Her groundbreaking work has been recognized by many community-based, national, and international organizations. In 2016, she received the [Grinnell Prize](https://www.grinnell.edu/about/grinnellprize) that recognizes innovative social change makers throughout the world, and she was included in [City of Women](https://www.newyorker.com/books/page-turner/city-of-women), an alternative New York City subway map recognizing women's contributions.
 
 <br>
 
